@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication3.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .back{
+            background-image:  linear-gradient(90deg, #02e9c6 50%, #02e9c6 50%, #00ff72 100%);
+            text-align:center;    
+            background-color: black;
+            display: flex;
+            justify-content: center;  
+            /*width:100%;
+            height:100%;*/
+            padding: 18% 0%;
+        }
+        .background{
+           // background-color: black;
+           background-image:  linear-gradient(90deg, #808080 50%, #4a4848 50%, #00ff72 100%);
+            width:400px;
+            height:250px;
+            color:white;
+            border-radius:10px;
+            padding-top:30px;
+         }
+    </style>
+</head>
+<body>
+    <div class="container back" >
+        <form class="background" id="form1" runat="server" >
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+                <asp:Label ID="Label1" runat="server" Text="username"></asp:Label>
+                <br />
+            </div>
+            <asp:TextBox ID="TextBox1" runat="server" style="margin-left: 0px" Width="258px"></asp:TextBox>
+            <br /><br />
+            <asp:Label ID="Label2" runat="server" Text="password"></asp:Label><br />
+               <asp:TextBox ID="TextBox2" runat="server" style="margin-left: 1px"  TextMode="Password" Width="258px"></asp:TextBox><br /><br />
+
+            <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember me" /> &nbsp;&nbsp;&nbsp;<a href="">Forgot Password</a><br />
+            <br />
+            <asp:Button ID="Button1" runat="server" style="margin-left: 0px" Text="login" Width="217px" /><br /><br />
+            Not a member? <a href="">Register Here</a>
+        </form>
+    </div>
+</body>
+</html>
